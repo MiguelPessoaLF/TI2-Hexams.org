@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Funcionários</title>
+    <link rel="icon" href="../assets/images/logo.png" sizes="32x32" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="public/assets/css/cde.css">
+    <link rel="stylesheet" href="public/assets/css/footer.css">
+    <link rel="stylesheet" href="public/assets/css/header.css">
+    <link rel="stylesheet" href="public/assets/css/styles.css">
+</head>
+
+<body>
+    <header>
+        <a href="principal.html" aria-label="Ir para a página principal">
+            <img src="public/assets/images/logohexamsorg.png" alt="Logo Exams Org" class="logo-header">
+        </a>
+        <div>
+            <button class="botao-sair" aria-label="Voltar à página anterior">
+                <a href="cde.html">Voltar</a>
+                <svg xmlns="http://www.w.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="#00FFD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="seta"
+                    aria-hidden="true">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="conteudo">
+        <nav aria-label="Navegação principal">
+            <div class="textoInicial">
+                <h1 class="tituloP">Cadastro de Funcionários</h1>
+            </div>
+            <p>Preencha os dados abaixo para cadastrar um novo funcionário no sistema.</p>
+        </nav>
+
+        <form id="cadastro-form" class="formularioEmpresa" aria-labelledby="cadastroFuncionarioTitulo">
+            <h2 id="cadastroFuncionarioTitulo">Cadastrar Novo Funcionário</h2>
+
+            <div class="form-group">
+                <div class="form">
+                    <label for="nome" class="formulario-label">Nome Completo*</label>
+                    <input type="text" class="formulario-controle" id="nome" name="nome" required aria-required="true"
+                        placeholder="Digite o nome do funcionário">
+                </div>
+                <div class="form">
+                    <label for="cpf" class="formulario-label">CPF*</label>
+                    <input type="text" class="formulario-controle" id="cpf" name="cpf" required aria-required="true"
+                        placeholder="000.000.000-00">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form" style="width: 100%;">
+                    <label for="selectedDate" class="formulario-label">Data de Nascimento*</label>
+                    <input type="date" class="formulario-controle" id="selectedDate" name="selectedDate" required
+                        aria-required="true">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form">
+                    <label for="telefone" class="formulario-label">Telefone*</label>
+                    <input type="tel" class="formulario-controle" id="telefone" name="telefone" required
+                        aria-required="true" placeholder="(00) 90000-0000">
+                </div>
+                <div class="form">
+                    <label for="email" class="formulario-label">E-mail*</label>
+                    <input type="email" class="formulario-controle" id="email" name="email" required
+                        aria-required="true" placeholder="exemplo@dominio.com">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form">
+                    <label for="CEP" class="formulario-label">CEP*</label>
+                    <input type="text" class="formulario-controle" id="CEP" name="CEP" required aria-required="true"
+                        placeholder="00000-000">
+                </div>
+                <div class="form">
+                    <label for="logradouro" class="formulario-label">Endereço (Rua/Avenida)</label>
+                    <input type="text" class="formulario-controle" id="logradouro" name="logradouro"
+                        placeholder="Preenchido automaticamente">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form">
+                    <label for="numero" class="formulario-label">N°*</label>
+                    <input type="text" class="formulario-controle" id="numero" name="Numero" required
+                        aria-required="true" placeholder="Digite o número">
+                </div>
+                <div class="form">
+                    <label for="bairro" class="formulario-label">Bairro</label>
+                    <input type="text" class="formulario-controle" id="bairro" name="Bairro"
+                        placeholder="Preenchido automaticamente">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form">
+                    <label for="cidade" class="formulario-label">Cidade*</label>
+                    <input type="text" class="formulario-controle" id="cidade" name="Cidade" required
+                        aria-required="true" placeholder="Preenchido automaticamente">
+                </div>
+                <div class="form">
+                    <label for="uf" class="formulario-label">UF</label>
+                    <input type="text" class="formulario-controle" id="uf" name="UF"
+                        placeholder="Preenchido automaticamente">
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-dark mt-3">Cadastrar Funcionário</button>
+        </form>
+
+
+        <section class="table-section" style="margin-top: 40px;">
+            <h2>Lista de Funcionários</h2>
+            <table id="tabela-usuarios" class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Data</th>
+                        <th>CPF</th>
+                        <th>Telefone</th>
+                        <th>E-mail</th>
+                        <th>Data</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody id="listaFuncionarios">
+                </tbody>
+            </table>
+
+            <div class="botao-container" style="margin-top: 20px;">
+                <button id="botao-exportar" class="btn btn-secondary">Exportar Planilha</button>
+                <button onclick="document.getElementById('importar-csv').click();" class="btn btn-secondary">Importar
+                    Planilha</button>
+                <input type="file" id="importar-csv" accept=".csv" style="display: none;">
+            </div>
+        </section>
+
+        <div class="botao-container" style="margin-top: 40px; justify-content: flex-end;">
+            <button type="button" class="btn btn-dark" onclick="irParaProximaPagina()">Continuar</button>
+        </div>
+    </main>
+
+     <footer class="footer">
+        <div class="footer-content">
+          <!-- Logo e Redes Sociais -->
+          <div class="logo">
+            <div class="logo">
+                <img src="assets/images/logohexamsorg.png" alt="Logo Examsorg" style="height: 50px;">
+            </div>
+            <div class="redes-sociais">
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="redesocial">
+                  <img src="assets/images/logoinsta.png" alt="Instagram" class="icon">
+                </a>
+                <a href="https://wa.me/551112345678" target="_blank" rel="noopener noreferrer" class="redesocial">
+                  <img src="assets/images/logowhatsapp.png" alt="WhatsApp" class="icon">
+                </a>
+                <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" class="redesocial">
+                  <img src="assets/images/logotiktok.png" alt="TikTok" class="icon">
+                </a>
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="redesocial">
+                  <img src="assets/images/logoface.png" alt="Facebook" class="icon">
+                </a>
+                <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="redesocial">
+                  <img src="assets/images/logoyoutube.png" alt="YouTube" class="icon">
+                </a>
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="redesocial">
+                  <img src="assets/images/logolinkedin.png" alt="LinkedIn" class="icon">
+                </a>
+              </div>
+              
+          </div>
+      
+          <!-- Contato e Inscrição -->
+          <div class="info-contato">
+            <p><span class="contatos-label">Telefone:</span> (11) 1234-5678</p>
+            <p><span class="contatos-label">E-mail:</span> <a class="link-email" href="mailto:contato@exams.org">contato@exams.org</a></p>
+            
+            <div class="enviar-email">
+              <input class="input-email-footer" type="email" placeholder="Digite seu email para ser notificado">
+              <button class="botao-enviar">Enviar</button>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <p class="copyright">© 2024 EXAMSORG®. Todos os direitos reservados. CNPJ: 12.345.678/0001-90.</p>
+
+    <button class="floating-button" aria-label="Configurações de acessibilidade"
+        onclick="toggleAccessibility()">A</button>
+
+    <script src="public/assets/js/cdf.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</body>
+
+</html>
