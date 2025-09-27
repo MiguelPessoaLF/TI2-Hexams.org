@@ -1,5 +1,6 @@
+
 async function carregarAcessibilidade() {
-    const response = await fetch('acessibilidade.json');
+    const response = await fetch('assets/data/acessibilidade.json');
     acessibilidadeData = await response.json();
 }
 
@@ -32,6 +33,7 @@ function toggleAccessibility() {
 window.onload = () => {
     carregarAcessibilidade();
 };
+
 
 
 

@@ -108,3 +108,68 @@ a:hover {
     border: 1px solid #252525;
     transform: translateX(2px); 
 }
+
+
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0F954C; 
+    color: black;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000; 
+}
+
+.floating-button:hover {
+    background-color: #0056b3; 
+}
+
+
+/* Estilos para Acessibilidade */
+
+/* ALTO CONTRASTE */
+body.alto-contraste {
+    background-color: #000000;
+    color: #FFFFFF !important; /* !important para forçar a sobreposição */
+}
+
+/* Links em alto contraste */
+body.alto-contraste a {
+    color: #FFFF00; /* Amarelo brilhante para se destacar */
+}
+
+/* Botões em alto contraste */
+body.alto-contraste button,
+body.alto-contraste .btn {
+    background-color: #333;
+    color: #FFFFFF;
+    border: 1px solid #FFFF00;
+}
+
+/* Inputs em alto contraste */
+body.alto-contraste input,
+body.alto-contraste textarea {
+    background-color: #222;
+    color: #FFFFFF;
+    border: 1px solid #FFF;
+}
+
+
+/* FONTE AUMENTADA */
+body.fonte-aumentada {
+    font-size: 1.2em; /* Aumenta o tamanho da fonte base em 20% */
+}
+
+/* Ajusta o tamanho de títulos e outros elementos proporcionalmente */
+body.fonte-aumentada h1 { font-size: 2.2em; }
+body.fonte-aumentada h2 { font-size: 1.8em; }
+body.fonte-aumentada p { font-size: 1.2em; }

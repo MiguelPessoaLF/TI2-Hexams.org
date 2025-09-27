@@ -1,3 +1,5 @@
+
+
 const menuButton = document.getElementById('menuButton');
 const sidebar = document.getElementById('sidebar');
 const closeSidebar = document.getElementById('closeSidebar');
@@ -15,3 +17,5 @@ window.addEventListener('click', (event) => {
         sidebar.classList.remove('open');
     }
 });
+
+ 

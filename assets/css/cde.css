@@ -3,12 +3,13 @@ main {
     max-width: 900px;
     margin: 50px auto;
     background-color: #fff;
-    box-shadow: 0px 4px 10px #0E4434 ;
     overflow: auto;
+     border-radius: 8px;
 }
 
 nav {
     margin-bottom: 20px;
+     border-radius: 4px;
 }
 
 .tituloP {
@@ -44,6 +45,9 @@ nav {
 }
 
 
+.formulario-label {
+    margin-bottom: 5px; /* Use um valor pequeno como 5px ou até 0px */
+}
 .form {
     flex: 1 1 48%; 
 }
@@ -117,6 +121,19 @@ textarea.formulario-controle {
     margin-top:0px ;
 
 }
+
+
+.form-section, .table-section {
+    flex: 1; /* Faz com que ambos os painéis cresçam igualmente */
+    min-width: 450px; /* Largura mínima antes de quebrar a linha */
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+}
+
 
 @media (max-width: 480px) {
     .tituloP {

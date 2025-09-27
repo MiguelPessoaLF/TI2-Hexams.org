@@ -116,3 +116,20 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     background-color: #0D7E3E;
     transform: scale(1.05);
 }
+
+/* Adicione isso ao seu arquivo CSS de estilos globais */
+
+/* Classe para o Alto Contraste */
+html.alto-contraste {
+    background-color: #000 !important;
+    color: #fff !important; /* CORREÇÃO CRÍTICA: Texto branco */
+}
+
+html.alto-contraste a {
+    color: #FFFF00 !important; /* Links em amarelo para destaque */
+}
+
+/* Classe para a Fonte Aumentada */
+html.fonte-aumentada {
+    font-size: 115%; /* Aumenta a fonte base do site */
+}
